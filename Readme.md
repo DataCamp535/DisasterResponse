@@ -2,6 +2,7 @@
 1. [Installation](#installation)
 2. [Project Motivation](#project-motivation)
 3. [Instructions](#instructions)
+4. [File description](#file-description)
 5. [Licensing](#licensing)
 
 # Installation
@@ -21,6 +22,13 @@ This instructions were originally made by the team at Udacity's.
 - To run ETL pipeline that cleans data and stores in database python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
 - To run ML pipeline that trains classifier and saves python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 2. Run the following command in the app's directory to run your web app. python run.py
+3. Navigate to http://0.0.0.0:3001/ in the browser
+
+# File Description
+**app/templates/**: templates/html files for web app
+**data/process_data.py**: ETL-pipline used for loading, merging, cleaning and storing the data
+**models/train_classifier.py**: ML-pipeline that loads data, trains a model and saves the model for later use (.pkl file)
+**app/run.py**: This file can be used to launch the Flask web app used to classify disaster messages
 
 
 # Licensing
