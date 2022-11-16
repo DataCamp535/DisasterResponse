@@ -69,6 +69,7 @@ def build_model():
     Return:
     cv: improved model with help of GridSearch
     """
+    # create Pipeline
     pipeline_ada=Pipeline([
             ('vect', CountVectorizer(tokenizer=tokenize)),
             ('tfidf', TfidfTransformer()),
@@ -100,6 +101,7 @@ def evaluate_model(model, X_test, y_test, category_names):
         print('Feature {}: {}'.format(i + 1, col))
         print(classification_report(y_test[col], y_pred[:, i]))
         i = i + 1
+    # Calculate accuracy
     accuracy = (y_pred == y_test.values).mean()
     print('The model accuracy is {:.3f}'.format(accuracy))
     
